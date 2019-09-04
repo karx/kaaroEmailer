@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.post('/new_email_flutter', async (request, response) => {
   const payload = request.body;
   console.log(payload);
-  const payloadJson = JSON.parse(payload);
+  const payloadJson = payload;
 
   const msg = {
     to: payloadJson.toAddress,
